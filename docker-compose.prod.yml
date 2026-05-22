@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: NOME_PROJETO-prod
+    ports:
+      - "4201:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
